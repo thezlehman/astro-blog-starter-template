@@ -8,18 +8,22 @@ import { SITE_TITLE } from '../consts';
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={`About · ${SITE_TITLE}`} description="About Windstorm Services." />
+		<BaseHead title={`Games · ${SITE_TITLE}`} description="Games from Windstorm Services." />
 		<style>
 			.page-header {
 				text-align: center;
 				padding: 4em 1em 2em 1em;
 			}
-			.about-content {
-				max-width: 640px;
-				margin: 0 auto;
-				padding: 0 1em 4em 1em;
+			.page-header p {
+				color: rgb(var(--gray));
+				max-width: 480px;
+				margin: 0.5em auto 0 auto;
 			}
-			.about-content p {
+			.empty-state {
+				max-width: 480px;
+				margin: 0 auto;
+				padding: 2em 1em 5em 1em;
+				text-align: center;
 				color: rgb(var(--gray));
 			}
 		</style>
@@ -28,14 +32,11 @@ import { SITE_TITLE } from '../consts';
 		<Header />
 		<main>
 			<div class="page-header">
-				<h1>About Windstorm Services</h1>
+				<h1>Games</h1>
+				<p>What we're making.</p>
 			</div>
-			<div class="about-content">
-				<p>
-					Windstorm Services is an independent game studio. We make games for ourselves and the
-					people who play them — not as work for hire.
-				</p>
-				<p>More about the studio and what we're working on is coming soon.</p>
+			<div class="empty-state">
+				<p>Details on our games are coming soon.</p>
 			</div>
 		</main>
 		<Footer />

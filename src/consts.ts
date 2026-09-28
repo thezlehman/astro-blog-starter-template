@@ -2,4 +2,4 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE = "Windstorm Services";
-export const SITE_DESCRIPTION = "Custom web and mobile app development.";
+export const SITE_DESCRIPTION = "An independent game studio.";
