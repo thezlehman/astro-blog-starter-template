@@ -1,0 +1,4 @@
+# Cloudflare Pages automatically serves *.html files at their extensionless
+# path (e.g. /about.html is also served at /about), so no explicit rewrite
+# rules are needed for the pages in this site. This file is here as a place
+# to add real redirects later if URLs ever need to move.

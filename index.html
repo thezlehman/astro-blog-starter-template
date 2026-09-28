@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Whirled: Second Wind — Windstorm Services</title>
+		<meta
+			name="description"
+			content="A community-driven revival of the classic Whirled virtual world, rebuilt from the open-sourced codebase to run without Flash. In development."
+		/>
+		<link rel="canonical" href="https://windstormservices.us/" />
+		<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+		<link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png" />
+		<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
+		<link rel="preload" href="/assets/fonts/fraunces-variable.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/assets/fonts/instrument-sans-variable.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="stylesheet" href="/assets/css/style.css" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Windstorm Services" />
+		<meta property="og:title" content="Whirled: Second Wind — a community revival" />
+		<meta
+			property="og:description"
+			content="A community-driven revival of the classic Whirled virtual world, rebuilt from the open-sourced codebase to run without Flash. In development."
+		/>
+		<meta property="og:image" content="https://windstormservices.us/assets/img/og-image.png" />
+		<meta property="og:url" content="https://windstormservices.us/" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Whirled: Second Wind — a community revival" />
+		<meta name="twitter:image" content="https://windstormservices.us/assets/img/og-image.png" />
+	</head>
+	<body>
+		<header class="masthead">
+			<div class="masthead-inner">
+				<a class="brand" href="/">
+					<img src="/assets/img/favicon.svg" alt="" width="28" height="28" />
+					<span class="brand-text">Windstorm Services<small>Whirled: Second Wind</small></span>
+				</a>
+				<nav class="nav-scroll" aria-label="Primary">
+					<a href="/" aria-current="page">Home</a>
+					<a href="/game">The Game</a>
+					<a href="/roadmap">Roadmap</a>
+					<a href="/community">Community</a>
+					<a href="/about">About</a>
+					<a href="/contact">Contact</a>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero container">
+				<svg class="wind-lines" viewBox="0 0 800 300" preserveAspectRatio="none" aria-hidden="true">
+					<path d="M0,60 Q100,40 200,60 T400,60 T600,60 T800,60" fill="none" stroke="#7fb3d5" stroke-width="1" />
+					<path d="M0,120 Q100,150 200,120 T400,120 T600,120 T800,120" fill="none" stroke="#7fb3d5" stroke-width="1" />
+					<path d="M0,220 Q100,195 200,220 T400,220 T600,220 T800,220" fill="none" stroke="#7fb3d5" stroke-width="1" />
+				</svg>
+				<div class="hero-grid">
+					<div>
+						<p class="hero-tagline mono">IN DEVELOPMENT — DESKTOP BROWSER CLIENT</p>
+						<span class="log-tag">Log 00 — Launch</span>
+						<h1>Whirled: Second Wind</h1>
+						<p class="lede">
+							Whirled: Second Wind is a fan-made revival of the classic Whirled virtual world,
+							rebuilt from its open-sourced codebase to run in a modern browser without Flash.
+						</p>
+						<div class="btn-row mb-1-5">
+							<a class="btn btn-primary" href="https://discord.gg/PLACEHOLDER" target="_blank" rel="noopener">
+								Join the Discord →
+							</a>
+						</div>
+
+						<div class="field-log-box" id="waitlist">
+							<p class="mono-label mb-0-75">Then, join the waitlist</p>
+							<form class="stacked" data-waitlist-form action="/api/waitlist" method="post">
+								<label for="email">
+									Email
+									<input type="email" id="email" name="email" placeholder="you@example.com" required />
+								</label>
+
+								<!-- Turnstile widget. Replace data-sitekey with your real site key. -->
+								<div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITE_KEY"></div>
+
+								<button type="submit" class="btn">Join the waitlist</button>
+								<p class="form-status" data-form-status role="status"></p>
+								<p class="form-note">We'll only email you about Second Wind. No spam, no lists sold.</p>
+								<noscript>
+									<p class="form-note">
+										JavaScript is off — the form still works, it'll just reload the page after
+										submitting.
+									</p>
+								</noscript>
+							</form>
+						</div>
+					</div>
+					<div>
+						<div class="shot-frame">
+							<div class="shot-caption">
+								<strong>Screenshot — placeholder</strong>
+								Room browser, browser client<br />(build in progress)
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section container">
+				<div class="section-head">
+					<span class="log-tag">Log 01 — A first look</span>
+					<h2>What it looks like right now</h2>
+					<p class="lede">
+						Real screenshots go here as soon as we're comfortable sharing them. For now, these
+						frames mark where they'll go and what they'll show.
+					</p>
+				</div>
+				<div class="frame-strip">
+					<div class="shot-frame">
+						<div class="shot-caption"><strong>Placeholder</strong>Your room, decorated</div>
+					</div>
+					<div class="shot-frame">
+						<div class="shot-caption"><strong>Placeholder</strong>Avatar customization</div>
+					</div>
+					<div class="shot-frame">
+						<div class="shot-caption"><strong>Placeholder</strong>Friends list &amp; chat</div>
+					</div>
+					<div class="shot-frame">
+						<div class="shot-caption"><strong>Placeholder</strong>Trading &amp; the in-game shop</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section container">
+				<div class="section-head">
+					<span class="log-tag">Log 02 — Why bring it back</span>
+					<h2>Why we're doing this</h2>
+				</div>
+				<div class="max-42">
+					<p>
+						I played Whirled when it was still running. When Three Rings shut it down and later
+						open-sourced the code, that codebase sat there for years — a whole virtual world,
+						public, and mostly untouched. Second Wind is me picking it back up: getting it running
+						without Flash, cleaning up what's broken, and building it back into something people
+						can actually log into again.
+					</p>
+					<p>
+						It's one developer right now, working in the open, moving at the pace of someone doing
+						this because they want it to exist — not on a launch deadline.
+					</p>
+				</div>
+			</section>
+
+			<section class="section container">
+				<div class="section-head">
+					<span class="log-tag">Log 03 — Where we are</span>
+					<h2>Roadmap, at a glance</h2>
+					<p class="lede">Beaufort scale, repurposed: calm is an idea, full gale is a public release.</p>
+				</div>
+				<div class="beaufort">
+					<div class="beaufort-track">
+						<div class="beaufort-fill"></div>
+						<div class="beaufort-flag">You are here</div>
+					</div>
+					<div class="beaufort-ticks">
+						<div class="beaufort-tick"><span class="num">0</span><span class="label">Calm</span></div>
+						<div class="beaufort-tick"><span class="num">2</span><span class="label">Breeze</span></div>
+						<div class="beaufort-tick"><span class="num">4</span><span class="label">Moderate</span></div>
+						<div class="beaufort-tick current"><span class="num">6</span><span class="label">Strong</span></div>
+						<div class="beaufort-tick"><span class="num">8</span><span class="label">Gale</span></div>
+						<div class="beaufort-tick"><span class="num">10</span><span class="label">Storm</span></div>
+						<div class="beaufort-tick"><span class="num">12</span><span class="label">Full gale</span></div>
+					</div>
+				</div>
+				<p class="mt-1-5">
+					<a href="/roadmap">See the full roadmap →</a>
+				</p>
+			</section>
+		</main>
+
+		<footer class="site-footer container">
+			<div class="footer-grid">
+				<div>
+					<p class="footer-credit">
+						Whirled: Second Wind is an independent, fan-made revival built from the open-sourced
+						Whirled codebase. It is not affiliated with, endorsed by, or connected to Three Rings
+						Design or Grey Havens. All credit for the original world goes to the people who built
+						and played it.
+					</p>
+					<p class="mono-label mt-1">Windstorm Services LLC — Shamokin, PA</p>
+				</div>
+				<nav class="footer-links" aria-label="Footer">
+					<a href="/support">Support</a>
+					<a href="/privacy">Privacy</a>
+					<a href="/terms">Terms</a>
+					<a href="https://discord.gg/PLACEHOLDER" target="_blank" rel="noopener">Discord</a>
+				</nav>
+			</div>
+		</footer>
+
+		<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+		<script src="/assets/js/main.js"></script>
+	</body>
+</html>
