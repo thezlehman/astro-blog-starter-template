@@ -2,13 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { getCollection } from 'astro:content';
-
-const posts = (await getCollection('blog'))
-	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-	.slice(0, 3);
 ---
 
 <!doctype html>
@@ -80,37 +74,6 @@ const posts = (await getCollection('blog'))
 				gap: 1em;
 				flex-wrap: wrap;
 			}
-			.btn {
-				display: inline-flex;
-				align-items: center;
-				gap: 0.5em;
-				padding: 0.85em 1.6em;
-				border-radius: 10px;
-				font-weight: 700;
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			.btn-primary {
-				background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-				color: #fff;
-				box-shadow: 0 8px 20px rgba(35, 55, 255, 0.35);
-			}
-			.btn-primary:hover {
-				color: #fff;
-				transform: translateY(-2px);
-				box-shadow: 0 12px 28px rgba(35, 55, 255, 0.45);
-			}
-			.btn-ghost {
-				background: #fff;
-				color: rgb(var(--black));
-				border: 1px solid rgb(var(--gray-light));
-			}
-			.btn-ghost:hover {
-				color: var(--accent);
-				border-color: var(--accent);
-				transform: translateY(-2px);
-			}
-
 			.section {
 				padding: 4em 1em;
 			}
@@ -170,67 +133,24 @@ const posts = (await getCollection('blog'))
 				font-size: 0.95em;
 			}
 
-			.posts-section {
+			.cta-band {
 				background: rgba(var(--gray-light), 35%);
-			}
-			.posts-grid {
-				display: grid;
-				grid-template-columns: repeat(3, 1fr);
-				gap: 1.5em;
-				list-style: none;
-				margin: 0;
-				padding: 0;
-			}
-			.post-card {
-				background: #fff;
-				border-radius: 16px;
-				overflow: hidden;
-				border: 1px solid rgb(var(--gray-light));
-				transition: 0.2s ease;
-			}
-			.post-card:hover {
-				box-shadow: var(--box-shadow);
-				transform: translateY(-4px);
-			}
-			.post-card a {
-				display: block;
-				text-decoration: none;
-				color: inherit;
-			}
-			.post-card img {
-				display: block;
-				width: 100%;
-				height: 160px;
-				object-fit: cover;
-				border-radius: 0;
-			}
-			.post-card .post-body {
-				padding: 1.25em;
-			}
-			.post-card .date {
-				margin: 0 0 0.3em 0;
-				font-size: 0.85em;
-				color: rgb(var(--gray));
-			}
-			.post-card h4 {
-				margin: 0;
-				font-size: 1.15em;
-				line-height: 1.3;
-			}
-			.post-card a:hover h4 {
-				color: var(--accent);
-			}
-			.view-all {
 				text-align: center;
-				margin-top: 2.5em;
+			}
+			.cta-band h2 {
+				margin-bottom: 0.3em;
+			}
+			.cta-band p {
+				color: rgb(var(--gray));
+				max-width: 480px;
+				margin: 0 auto 1.5em auto;
 			}
 
 			@media (max-width: 720px) {
 				.hero {
 					padding: 3.5em 1em 3em 1em;
 				}
-				.features,
-				.posts-grid {
+				.features {
 					grid-template-columns: 1fr;
 				}
 			}
@@ -241,12 +161,12 @@ const posts = (await getCollection('blog'))
 		<main>
 			<section class="hero">
 				<div class="hero-inner">
-					<span class="eyebrow">🧑‍🚀 Welcome aboard</span>
-					<h1>Stories, ideas, and things worth sharing</h1>
-					<p class="lede">{SITE_DESCRIPTION}</p>
+					<span class="eyebrow">⚡ Windstorm Services</span>
+					<h1>We build the software your business runs on</h1>
+					<p class="lede">{SITE_DESCRIPTION} From idea to launch to long-term support.</p>
 					<div class="cta-row">
-						<a class="btn btn-primary" href="/blog">Read the blog →</a>
-						<a class="btn btn-ghost" href="/about">About me</a>
+						<a class="btn btn-primary" href="/contact">Start a project →</a>
+						<a class="btn btn-ghost" href="/services">See our services</a>
 					</div>
 				</div>
 			</section>
@@ -254,59 +174,36 @@ const posts = (await getCollection('blog'))
 			<section class="section">
 				<div class="section-inner">
 					<div class="section-header">
-						<h2>Why you're here</h2>
-						<p>A fast, minimal home for writing that's built to grow with you.</p>
+						<h2>What we do</h2>
+						<p>An in-house team that plans, builds, and maintains your software.</p>
 					</div>
 					<div class="features">
 						<div class="feature-card">
-							<div class="feature-icon">⚡</div>
-							<h3>Fast by default</h3>
-							<p>Built on Astro for near-instant page loads and zero unnecessary JavaScript.</p>
+							<div class="feature-icon">🖥️</div>
+							<h3>Web applications</h3>
+							<p>Custom web apps and internal tools, designed and built around how you actually work.</p>
 						</div>
 						<div class="feature-card">
-							<div class="feature-icon">✍️</div>
-							<h3>Made for writing</h3>
-							<p>Markdown and MDX support out of the box, so you can focus on the words.</p>
+							<div class="feature-icon">📱</div>
+							<h3>Mobile apps</h3>
+							<p>Native and cross-platform apps for iOS and Android, from prototype to app store.</p>
 						</div>
 						<div class="feature-card">
-							<div class="feature-icon">🎨</div>
-							<h3>Easy to make yours</h3>
-							<p>Clean, well-organized components and styles that are simple to customize.</p>
+							<div class="feature-icon">🛠️</div>
+							<h3>Ongoing support</h3>
+							<p>We don't disappear after launch — updates, fixes, and improvements as you grow.</p>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			{
-				posts.length > 0 && (
-					<section class="section posts-section">
-						<div class="section-inner">
-							<div class="section-header">
-								<h2>Latest posts</h2>
-								<p>Fresh from the blog.</p>
-							</div>
-							<ul class="posts-grid">
-								{posts.map((post) => (
-									<li class="post-card">
-										<a href={`/blog/${post.id}/`}>
-											<img width={720} height={360} src={post.data.heroImage} alt="" />
-											<div class="post-body">
-												<p class="date">
-													<FormattedDate date={post.data.pubDate} />
-												</p>
-												<h4>{post.data.title}</h4>
-											</div>
-										</a>
-									</li>
-								))}
-							</ul>
-							<div class="view-all">
-								<a class="btn btn-ghost" href="/blog">View all posts →</a>
-							</div>
-						</div>
-					</section>
-				)
-			}
+			<section class="section cta-band">
+				<div class="section-inner">
+					<h2>Already working with a team?</h2>
+					<p>Good — we're all set here. If you're a vendor reaching out, we're not looking for new partners right now.</p>
+					<a class="btn btn-ghost" href="/contact">Reach out anyway</a>
+				</div>
+			</section>
 		</main>
 		<Footer />
 	</body>

@@ -136,6 +136,37 @@ hr {
 	}
 }
 
+.btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+	padding: 0.85em 1.6em;
+	border-radius: 10px;
+	font-weight: 700;
+	text-decoration: none;
+	transition: 0.2s ease;
+}
+.btn-primary {
+	background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+	color: #fff;
+	box-shadow: 0 8px 20px rgba(35, 55, 255, 0.35);
+}
+.btn-primary:hover {
+	color: #fff;
+	transform: translateY(-2px);
+	box-shadow: 0 12px 28px rgba(35, 55, 255, 0.45);
+}
+.btn-ghost {
+	background: #fff;
+	color: rgb(var(--black));
+	border: 1px solid rgb(var(--gray-light));
+}
+.btn-ghost:hover {
+	color: var(--accent);
+	border-color: var(--accent);
+	transform: translateY(-2px);
+}
+
 .sr-only {
 	border: 0;
 	padding: 0;
