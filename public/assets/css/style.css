@@ -1,6 +1,6 @@
 /* Windstorm Services — Whirled: Second Wind
    Design: field-log / weather-chart. Cream paper, ink navy line work,
-   sky and sunrise as the only accents. Game art brings its own color. */
+   sky and flag-red as the only accents. Game art brings its own color. */
 
 @font-face {
 	font-family: "Fraunces";
@@ -39,7 +39,7 @@
 	--ink-faint: rgba(20, 33, 61, 0.4);
 	--line: rgba(20, 33, 61, 0.28);
 	--sky: #7fb3d5;
-	--sunrise: #f26b38;
+	--flag-red: #b23a2e;
 	--font-display: "Fraunces", Georgia, serif;
 	--font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
 	--font-body: "Instrument Sans", -apple-system, sans-serif;
@@ -71,7 +71,7 @@ a {
 	color: var(--ink);
 }
 a:not(.btn) {
-	text-decoration-color: var(--sunrise);
+	text-decoration-color: var(--flag-red);
 	text-decoration-thickness: 2px;
 	text-underline-offset: 3px;
 }
@@ -190,7 +190,7 @@ p {
 .nav-scroll a:hover,
 .nav-scroll a[aria-current="page"] {
 	color: var(--ink);
-	border-bottom-color: var(--sunrise);
+	border-bottom-color: var(--flag-red);
 }
 
 /* ---------- buttons ---------- */
@@ -218,8 +218,8 @@ p {
 	box-shadow: 3px 3px 0 var(--ink);
 }
 .btn-primary {
-	background: var(--sunrise);
-	border-color: var(--sunrise);
+	background: var(--flag-red);
+	border-color: var(--flag-red);
 	color: var(--paper);
 }
 .btn-primary:hover {
@@ -413,7 +413,7 @@ p {
 	white-space: nowrap;
 }
 .beaufort-tick.current span.num {
-	color: var(--sunrise);
+	color: var(--flag-red);
 	font-weight: 600;
 }
 .beaufort-flag {
@@ -425,7 +425,7 @@ p {
 	font-size: 0.62rem;
 	font-weight: 600;
 	color: var(--paper);
-	background: var(--sunrise);
+	background: var(--flag-red);
 	padding: 0.15em 0.4em;
 	white-space: nowrap;
 }
@@ -451,7 +451,7 @@ p {
 	white-space: nowrap;
 }
 .stage.current .stage-force {
-	color: var(--sunrise);
+	color: var(--flag-red);
 	font-weight: 600;
 }
 .stage h3 {
@@ -471,7 +471,7 @@ p {
 	color: var(--ink-soft);
 }
 .stage.current .stage-status {
-	color: var(--sunrise);
+	color: var(--flag-red);
 }
 
 /* ---------- two-up feature lists ---------- */
@@ -554,7 +554,7 @@ textarea:focus {
 	color: #2f6f3e;
 }
 .form-status[data-state="error"] {
-	color: var(--sunrise);
+	color: var(--flag-red);
 }
 noscript .form-note {
 	display: none;
@@ -607,8 +607,8 @@ noscript .form-note {
 	font-weight: 600;
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
-	color: var(--sunrise);
-	border: 1px solid var(--sunrise);
+	color: var(--flag-red);
+	border: 1px solid var(--flag-red);
 	padding: 0.3em 0.6em;
 	margin-bottom: 1.5rem;
 }
@@ -652,6 +652,9 @@ noscript .form-note {
 }
 .max-42 {
 	max-width: 42rem;
+}
+.pos-66 {
+	--pos: 66%;
 }
 .sr-only {
 	position: absolute !important;
