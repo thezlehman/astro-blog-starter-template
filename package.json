@@ -1,11 +1,11 @@
 {
 	"name": "windstorm-services-site",
 	"private": true,
-	"description": "Static site for Whirled: Second Wind — no build step, plain HTML/CSS/JS, deployed to Cloudflare Pages.",
+	"description": "Static site for Whirled: Second Wind — no build step, plain HTML/CSS/JS, deployed to Cloudflare Workers static assets.",
 	"scripts": {
 		"build": "echo 'No build step — plain static HTML/CSS/JS.'",
-		"dev": "wrangler pages dev . --port 8788",
-		"deploy": "wrangler pages deploy ."
+		"dev": "wrangler dev --port 8788",
+		"deploy": "wrangler deploy"
 	},
 	"devDependencies": {
 		"wrangler": "^4.142.0"

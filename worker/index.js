@@ -1,11 +1,14 @@
-// Cloudflare Pages Function — POST /api/waitlist
-// Validates the submitted email, checks it with Turnstile, then forwards it
-// to Buttondown. Configure in the Cloudflare dashboard (Pages project ->
-// Settings -> Environment variables):
+// Worker for Whirled: Second Wind — everything except /api/* is served
+// directly from static assets (see run_worker_first in wrangler.toml), so
+// this script only needs to handle the waitlist endpoint.
+//
+// Configure in the Cloudflare dashboard (Worker -> Settings -> Variables and
+// Secrets):
 //   TURNSTILE_SECRET_KEY  - secret key from the Turnstile widget
 //   BUTTONDOWN_API_KEY    - API key from https://buttondown.email/settings/api
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const SECURITY_HEADERS = { "X-Content-Type-Options": "nosniff" };
 
 function wantsJson(request) {
 	const accept = request.headers.get("Accept") || "";
@@ -15,7 +18,7 @@ function wantsJson(request) {
 function jsonResponse(status, body) {
 	return new Response(JSON.stringify(body), {
 		status,
-		headers: { "Content-Type": "application/json" },
+		headers: { "Content-Type": "application/json", ...SECURITY_HEADERS },
 	});
 }
 
@@ -38,8 +41,6 @@ async function verifyTurnstile(token, secret, ip) {
 
 async function addToButtondown(email, apiKey) {
 	if (!apiKey) {
-		// Not configured yet: succeed locally so the form still works end to
-		// end during setup, but log so it's visible in `wrangler pages deployment tail`.
 		console.warn("BUTTONDOWN_API_KEY not set — skipping subscriber creation for", email);
 		return { ok: true };
 	}
@@ -55,7 +56,6 @@ async function addToButtondown(email, apiKey) {
 
 	if (res.status === 201) return { ok: true };
 
-	// Buttondown returns 400 with a "duplicate" style error if already subscribed.
 	if (res.status === 400) {
 		const data = await res.json().catch(() => ({}));
 		const alreadySubscribed = JSON.stringify(data).toLowerCase().includes("already");
@@ -65,8 +65,10 @@ async function addToButtondown(email, apiKey) {
 	return { ok: false, status: res.status };
 }
 
-export async function onRequestPost(context) {
-	const { request, env } = context;
+async function handleWaitlist(request, env) {
+	if (request.method !== "POST") {
+		return jsonResponse(405, { error: "Use POST to join the waitlist." });
+	}
 
 	let email = "";
 	let turnstileToken = "";
@@ -109,6 +111,14 @@ export async function onRequestPost(context) {
 	return jsonResponse(200, { ok: true, alreadySubscribed: !!result.alreadySubscribed });
 }
 
-export async function onRequestGet() {
-	return jsonResponse(405, { error: "Use POST to join the waitlist." });
-}
+export default {
+	async fetch(request, env) {
+		const { pathname } = new URL(request.url);
+
+		if (pathname === "/api/waitlist") {
+			return handleWaitlist(request, env);
+		}
+
+		return jsonResponse(404, { error: "Not found." });
+	},
+};
