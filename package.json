@@ -3,6 +3,7 @@
 	"private": true,
 	"description": "Static site for Whirled: Second Wind — no build step, plain HTML/CSS/JS, deployed to Cloudflare Pages.",
 	"scripts": {
+		"build": "echo 'No build step — plain static HTML/CSS/JS.'",
 		"dev": "wrangler pages dev . --port 8788",
 		"deploy": "wrangler pages deploy ."
 	}
