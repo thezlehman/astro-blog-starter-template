@@ -696,3 +696,63 @@ noscript .form-note {
 		width: 320px;
 	}
 }
+
+/* ---------- Couchpilot (app pages) ---------- */
+.app-icon {
+	width: 88px;
+	height: 88px;
+	border-radius: 20px;
+	border: 1.5px solid var(--ink);
+	margin-bottom: 1rem;
+}
+.product-card {
+	display: grid;
+	gap: 1.25rem;
+	border: 1px solid var(--ink);
+	padding: 1.5rem;
+	background: var(--paper-dim);
+}
+.product-card .app-icon {
+	margin-bottom: 0;
+}
+.product-card p:last-child {
+	margin-bottom: 0;
+}
+.phone-strip {
+	display: flex;
+	gap: 1.25rem;
+	overflow-x: auto;
+	padding: 0.5rem 0.25rem 1rem 0.25rem;
+	margin: 0;
+	-webkit-overflow-scrolling: touch;
+}
+.phone-shot {
+	flex: 0 0 auto;
+	width: 44vw;
+	max-width: 210px;
+	margin: 0;
+}
+.phone-shot img {
+	width: 100%;
+	height: auto;
+	border: 1.5px solid var(--ink);
+	border-radius: 16px;
+	background: var(--ink);
+}
+.phone-shot figcaption {
+	font-family: var(--font-mono);
+	font-size: 0.7rem;
+	color: var(--ink-soft);
+	margin-top: 0.5rem;
+	text-align: center;
+}
+.split li strong {
+	font-weight: 600;
+}
+
+@media (min-width: 640px) {
+	.product-card {
+		grid-template-columns: auto 1fr;
+		align-items: center;
+	}
+}
