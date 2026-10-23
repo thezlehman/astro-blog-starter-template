@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Privacy Policy — Whirled: Second Wind</title>
-		<meta name="description" content="Privacy policy for Whirled: Second Wind and Windstorm Services." />
+		<title>Privacy Policy — Windstorm Services</title>
+		<meta name="description" content="Privacy policy for Windstorm Services: Couchpilot, Whirled: Second Wind and this website." />
 		<link rel="canonical" href="https://windstormservices.us/privacy" />
 		<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
 		<link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png" />
@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="/assets/css/style.css" />
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content="Windstorm Services" />
-		<meta property="og:title" content="Privacy Policy — Whirled: Second Wind" />
+		<meta property="og:title" content="Privacy Policy — Windstorm Services" />
 		<meta property="og:image" content="https://windstormservices.us/assets/img/og-image.png" />
 		<meta property="og:url" content="https://windstormservices.us/privacy" />
 		<meta name="robots" content="noindex" />
@@ -37,57 +37,111 @@
 
 		<main>
 			<section class="section container no-border">
-				<span class="draft-flag">Draft template — have this reviewed before publishing</span>
 				<h1>Privacy Policy</h1>
 				<div class="prose">
-					<p><em>Last updated: [DATE]</em></p>
+					<p><em>Last updated: October 23, 2026</em></p>
 
+					<p>This policy covers everything operated by Windstorm Services LLC ("we," "us"):</p>
+					<ul>
+						<li><strong>Couchpilot</strong>, our Android remote-control app for Android TV and Google TV</li>
+						<li><strong>The windstormservices.us website</strong></li>
+						<li><strong>Whirled: Second Wind</strong>, its website and, once available, its client and services</li>
+					</ul>
 					<p>
-						This policy covers the Whirled: Second Wind website and, once available, the Whirled:
-						Second Wind client and services, operated by Windstorm Services LLC ("we," "us").
+						Each has its own section below, because they handle data very differently. The commitments
+						in "What we never do" apply to all of them.
 					</p>
 
-					<h2>1. What we collect</h2>
-					<p><strong>Waitlist:</strong> if you submit your email to join the waitlist, we store that
-						email address with our email provider (currently Buttondown) so we can notify you about
-						the project.</p>
+					<h2 id="couchpilot">1. Couchpilot (Android app)</h2>
+					<p>
+						<strong>Couchpilot collects nothing.</strong> It has no account, no analytics, no
+						advertising, no crash-reporting service, and no servers of ours that it talks to.
+					</p>
+					<h3>What stays on your phone</h3>
+					<ul>
+						<li><strong>Your TVs:</strong> the name, network address and public key of each TV you pair with.</li>
+						<li><strong>Your settings:</strong> theme, button size, the apps you pinned, and similar choices.</li>
+						<li><strong>A pairing key:</strong> a cryptographic key created on your phone in Android's
+							secure Keystore. It proves to your TV that this phone is the one you paired, and it
+							can't be copied off the phone, even by the app.</li>
+						<li><strong>A crash report</strong>, only if the app crashes. It's saved on your phone and
+							shown to you the next time you open the app, with a button to copy it if you choose to
+							send it to us. It's never sent automatically.</li>
+					</ul>
+					<p>This data is excluded from Android backups and never leaves your phone.</p>
+					<h3>Network use</h3>
+					<p>Couchpilot only connects to devices on your local network:</p>
+					<ul>
+						<li>It looks for TVs using local network discovery (mDNS).</li>
+						<li>It connects to the TV you choose over an encrypted (TLS) connection, to send
+							remote-control commands and receive things like the current volume.</li>
+					</ul>
+					<p>It makes no connections to the internet.</p>
+					<h3>Permissions</h3>
+					<ul>
+						<li><strong>Network access</strong>, to reach your TV.</li>
+						<li><strong>Nearby devices / local network</strong> (Android 17 and later), which Android
+							requires for any app that talks to devices on your home network.</li>
+					</ul>
+					<h3>Deleting your data</h3>
+					<p>
+						Uninstall the app, or use Settings → "Forget all TVs and reset pairing key". To remove your
+						phone from a TV's list of remotes, use the TV's own settings.
+					</p>
+
+					<h2 id="website">2. The windstormservices.us website</h2>
+					<p><strong>Hosting logs:</strong> this site is hosted on Cloudflare Pages, which may log
+						standard technical data (IP address, browser, request timing) as part of normal
+						operation.</p>
 					<p><strong>Spam prevention:</strong> the waitlist form uses Cloudflare Turnstile, which may
 						process technical data (such as your IP address and browser signals) to verify you're
 						human. See
 						<a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare's privacy policy</a>.</p>
-					<p><strong>Hosting logs:</strong> this site is hosted on Cloudflare Pages, which may log
-						standard technical data (IP address, browser, request timing) as part of normal
-						operation.</p>
-					<p><strong>[TODO: game account data]</strong> once the client and account system launch,
-						this section needs to list what's collected (e.g. account email, in-world username,
-						avatar/room data, purchase history) and how it's stored.</p>
 
-					<h2>2. What we don't do</h2>
-					<p>We don't sell your data. We don't use third-party ad-tracking networks on this site.</p>
+					<h2 id="whirled">3. Whirled: Second Wind</h2>
+					<p><strong>Waitlist:</strong> if you submit your email to join the waitlist, we store that
+						email address with our email provider (currently Buttondown) so we can notify you about
+						the project.</p>
+					<p><strong>Game accounts:</strong> the Whirled: Second Wind client and account system aren't
+						available yet. Before they launch, we'll update this policy to describe what they collect
+						and how it's stored.</p>
 
-					<h2>3. Children's privacy</h2>
+					<h2>4. What we never do</h2>
+					<ul>
+						<li>We don't sell your data.</li>
+						<li>We don't use third-party ad-tracking networks.</li>
+						<li>Couchpilot contains no ads or analytics of any kind.</li>
+					</ul>
+
+					<h2>5. Children's privacy</h2>
+					<p>Couchpilot doesn't collect personal information from anyone, including children.</p>
 					<p>
-						[TODO: confirm target age rating and COPPA/children's-privacy stance before launch.]
 						This site is not directed at children under 13, and we do not knowingly collect personal
 						information from children under 13.
 					</p>
 
-					<h2>4. Your choices</h2>
+					<h2>6. Your choices</h2>
+					<ul>
+						<li><strong>Waitlist:</strong> to be removed, or to ask what data we have about you, email
+							<a href="mailto:hello@windstormservices.us">hello@windstormservices.us</a>.</li>
+						<li><strong>Couchpilot:</strong> we don't hold any data about you. Everything is on your
+							phone and can be deleted as described in <a href="#couchpilot">section 1</a>.</li>
+					</ul>
+
+					<h2>7. Changes to this policy</h2>
 					<p>
-						To be removed from the waitlist, or to ask what data we have about you, email
-						<a href="mailto:hello@windstormservices.us">hello@windstormservices.us</a>.
+						We'll update the date above when this policy changes. For Couchpilot, changes ship with
+						the app update they apply to.
 					</p>
 
-					<h2>5. Changes to this policy</h2>
-					<p>
-						We'll update the date above when this changes, and post significant changes in the
-						<a href="https://discord.gg/PLACEHOLDER" target="_blank" rel="noopener">Discord</a>.
-					</p>
-
-					<h2>6. Contact</h2>
+					<h2>8. Contact</h2>
 					<p>
 						Windstorm Services LLC, Shamokin, PA —
 						<a href="mailto:hello@windstormservices.us">hello@windstormservices.us</a>
+					</p>
+					<p>
+						<small>Android TV, Google TV and Chromecast are trademarks of Google LLC. Couchpilot is not
+						affiliated with Google.</small>
 					</p>
 				</div>
 			</section>
