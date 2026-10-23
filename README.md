@@ -1,8 +1,14 @@
-# Windstorm Services — Whirled: Second Wind
+# Windstorm Services — independent apps & games
 
-Static marketing site for Whirled: Second Wind, an independent revival of the
-classic Whirled virtual world. Plain HTML/CSS/JS, no build step, deployed as
-a Cloudflare Worker with static assets.
+Static site for Windstorm Services, an independent studio making Couchpilot
+(an Android TV remote app) and Whirled: Second Wind (an independent revival
+of the classic Whirled virtual world). Plain HTML/CSS/JS, no build step,
+deployed as a Cloudflare Worker with static assets.
+
+Pages: `/` (studio home), `/couchpilot`, `/whirled` (Whirled overview and
+waitlist) with `/game`, `/roadmap`, `/community`, plus `/about`, `/support`,
+`/contact`, `/privacy`, `/terms`. Every page shares the same header and footer
+markup; when adding a page, copy an existing one.
 
 ## Local development
 
