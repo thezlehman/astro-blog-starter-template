@@ -19,7 +19,7 @@
 		var email = data.get("email");
 
 		if (!email || email.indexOf("@") === -1) {
-			setStatus("error", "That doesn't look like a valid email — mind checking it?");
+			setStatus("error", "That doesn't look like a valid email. Mind checking it?");
 			return;
 		}
 
@@ -44,7 +44,7 @@
 					setStatus("success", "You're on the list. We'll email you when there's news.");
 					form.reset();
 				} else {
-					setStatus("error", result.body && result.body.error ? result.body.error : "Something went wrong — try again in a moment.");
+					setStatus("error", result.body && result.body.error ? result.body.error : "Something went wrong. Try again in a moment.");
 				}
 			})
 			.catch(function () {

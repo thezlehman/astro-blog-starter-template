@@ -1,4 +1,4 @@
-// Worker for Whirled: Second Wind — everything except /api/* is served
+// Worker for Whirled: Second Wind. Everything except /api/* is served
 // directly from static assets (see run_worker_first in wrangler.toml), so
 // this script only needs to handle the waitlist endpoint.
 //
@@ -23,7 +23,7 @@ function jsonResponse(status, body) {
 }
 
 async function verifyTurnstile(token, secret, ip) {
-	if (!secret) return true; // not configured yet — skip rather than block signups
+	if (!secret) return true; // not configured yet, so skip rather than block signups
 	if (!token) return false;
 
 	const body = new URLSearchParams();
@@ -41,7 +41,7 @@ async function verifyTurnstile(token, secret, ip) {
 
 async function addToButtondown(email, apiKey) {
 	if (!apiKey) {
-		console.warn("BUTTONDOWN_API_KEY not set — skipping subscriber creation for", email);
+		console.warn("BUTTONDOWN_API_KEY not set; skipping subscriber creation for", email);
 		return { ok: true };
 	}
 
@@ -98,13 +98,13 @@ async function handleWaitlist(request, env) {
 	);
 	if (!humanVerified) {
 		if (redirectBack) return Response.redirect(new URL("/?error=verification-failed", request.url), 303);
-		return jsonResponse(400, { error: "Verification failed — please try again." });
+		return jsonResponse(400, { error: "Verification failed. Please try again." });
 	}
 
 	const result = await addToButtondown(email, env.BUTTONDOWN_API_KEY);
 	if (!result.ok) {
 		if (redirectBack) return Response.redirect(new URL("/?error=signup-failed", request.url), 303);
-		return jsonResponse(502, { error: "Couldn't add you to the list — try again shortly." });
+		return jsonResponse(502, { error: "Couldn't add you to the list. Try again shortly." });
 	}
 
 	if (redirectBack) return Response.redirect(redirectBack, 303);
