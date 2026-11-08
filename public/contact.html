@@ -9,25 +9,26 @@
 		<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
 		<link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png" />
 		<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
-		<link rel="preload" href="/assets/fonts/instrument-sans-variable.woff2" as="font" type="font/woff2" crossorigin />
-		<link rel="stylesheet" href="/assets/css/style.css" />
-		<meta name="theme-color" content="#05080f" />
+		<link rel="preload" href="/assets/fonts/big-shoulders-variable.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/assets/fonts/ibm-plex-sans-variable.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="stylesheet" href="/assets/css/styles.css" />
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content="Windstorm Services" />
-		<meta property="og:title" content="Contact | Windstorm Services" />
+		<meta property="og:title" content="Contact Windstorm Services" />
 		<meta property="og:description" content="Get in touch with Windstorm Services." />
-		<meta property="og:image" content="https://windstormservices.us/assets/img/og-image.png" />
 		<meta property="og:url" content="https://windstormservices.us/contact" />
-		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:card" content="summary" />
 	</head>
 	<body>
+		<a class="skip-link" href="#main">Skip to content</a>
+
 		<header class="masthead">
 			<div class="masthead-inner">
 				<a class="brand" href="/">
-					<img src="/assets/img/logo-mark.svg" alt="" width="30" height="30" />
-					<span class="brand-text">Windstorm Services<small>Apps &amp; games</small></span>
+					<span class="mark">WINDSTORM</span>
+					<span class="rest">Services</span>
 				</a>
-				<nav class="nav-scroll" aria-label="Primary">
+				<nav class="nav-row" aria-label="Primary">
 					<a href="/">Home</a>
 					<a href="/couchpilot">Couchpilot</a>
 					<a href="/whirled">Whirled</a>
@@ -38,66 +39,99 @@
 			</div>
 		</header>
 
-		<main>
-			<section class="section container no-border">
-				<span class="log-tag">Contact</span>
-				<h1>Get in touch</h1>
-				<div class="split mt-2">
-					<div>
-						<h2 class="sub-heading">General</h2>
-						<p class="muted">Questions, bug reports, anything else.</p>
-						<p><a href="mailto:hello@windstormservices.us" class="mono">hello@windstormservices.us</a></p>
-					</div>
-					<div>
-						<h2 class="sub-heading">Press</h2>
-						<p class="muted">App store reviewers, press, and coverage requests.</p>
-						<p><a href="mailto:press@windstormservices.us" class="mono">press@windstormservices.us</a></p>
-					</div>
-				</div>
-				<div class="mt-2-5">
-					<h2 class="sub-heading">Whirled: Second Wind on Discord</h2>
-					<p class="muted">The fastest way to reach us about the game, day to day.</p>
-					<div class="btn-row">
-						<a class="btn btn-primary" href="https://discord.gg/PLACEHOLDER" target="_blank" rel="noopener">
-							Join the Discord →
-						</a>
+		<main id="main">
+			<section class="section">
+				<div class="container hero-grid">
+					<div class="hero-top">
+						<div class="hero-copy">
+							<h1>Get in touch</h1>
+							<p class="lede">
+								Questions, bug reports, press inquiries, anything else — send a message, or email
+								directly.
+							</p>
+							<dl class="spec-rows max-24">
+								<div class="spec-row">
+									<dt>General</dt>
+									<dd><a href="mailto:hello@windstormservices.us">hello@windstormservices.us</a></dd>
+								</div>
+								<div class="spec-row">
+									<dt>Press</dt>
+									<dd><a href="mailto:press@windstormservices.us">press@windstormservices.us</a></dd>
+								</div>
+								<div class="spec-row">
+									<dt>Whirled on Discord</dt>
+									<dd><a href="https://discord.gg/PLACEHOLDER" target="_blank" rel="noopener">Join →</a></dd>
+								</div>
+							</dl>
+						</div>
+						<div class="plate plate-compact">
+							<p class="plate-label">Send a message</p>
+							<form class="stacked" data-contact-form="hello@windstormservices.us">
+								<label for="name">
+									Name
+									<input type="text" id="name" name="name" required />
+								</label>
+								<label for="email">
+									Email
+									<input type="email" id="email" name="email" required />
+								</label>
+								<label for="message">
+									Message
+									<textarea id="message" name="message" required></textarea>
+								</label>
+								<button type="submit" class="btn btn-primary">Send</button>
+								<p class="form-note">
+									Opens your email client with this filled in — if JavaScript is off, just email
+									<a href="mailto:hello@windstormservices.us">hello@windstormservices.us</a> directly.
+								</p>
+							</form>
+						</div>
 					</div>
 				</div>
 			</section>
 		</main>
 
 		<footer class="site-footer">
-			<div class="footer-inner">
+			<div class="container">
 				<div class="footer-brand">
 					<a class="brand" href="/">
-						<img src="/assets/img/logo-mark.svg" alt="" width="30" height="30" />
-						<span class="brand-text">Windstorm Services<small>Apps &amp; games</small></span>
+						<span class="mark">WINDSTORM</span>
+						<span class="rest">Services</span>
 					</a>
 					<p>An independent studio in Shamokin, Pennsylvania, making apps and games we'd want to use ourselves.</p>
 				</div>
 				<div class="footer-cols">
-					<div>
-						<h4>Apps</h4>
-						<a href="/couchpilot">Couchpilot</a>
-						<a href="/whirled">Whirled: Second Wind</a>
+					<div class="footer-col">
+						<h2>Apps</h2>
+						<ul>
+							<li><a href="/couchpilot">Couchpilot</a></li>
+							<li><a href="/whirled">Whirled: Second Wind</a></li>
+						</ul>
 					</div>
-					<div>
-						<h4>Studio</h4>
-						<a href="/about">About</a>
-						<a href="/support">Support</a>
-						<a href="/contact">Contact</a>
+					<div class="footer-col">
+						<h2>Studio</h2>
+						<ul>
+							<li><a href="/about">About</a></li>
+							<li><a href="/support">Support</a></li>
+							<li><a href="/contact">Contact</a></li>
+						</ul>
 					</div>
-					<div>
-						<h4>Legal</h4>
-						<a href="/privacy">Privacy</a>
-						<a href="/terms">Terms</a>
+					<div class="footer-col">
+						<h2>Legal</h2>
+						<ul>
+							<li><a href="/privacy">Privacy</a></li>
+							<li><a href="/terms">Terms</a></li>
+						</ul>
 					</div>
 				</div>
-			</div>
-			<div class="footer-legal">
-
-				<p>© 2026 Windstorm Services LLC · Shamokin, Pennsylvania</p>
+				<p class="footer-legal">
+					Android TV and Google Play are trademarks of Google LLC. Couchpilot is not affiliated with
+					or endorsed by Google. Whirled: Second Wind is an independent fan project, not affiliated
+					with or endorsed by the creators of the original Whirled. &copy; 2026 Windstorm Services.
+				</p>
 			</div>
 		</footer>
+
+		<script src="/assets/js/main.js"></script>
 	</body>
 </html>

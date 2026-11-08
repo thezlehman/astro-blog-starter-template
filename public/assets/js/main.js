@@ -58,3 +58,28 @@
 			});
 	});
 })();
+
+(function () {
+	"use strict";
+
+	var form = document.querySelector("[data-contact-form]");
+	if (!form) return;
+
+	// No backend for general contact yet — this opens the visitor's own email
+	// client with the message prefilled. The plain mailto link elsewhere on
+	// the page is the real fallback if JavaScript is off.
+	form.addEventListener("submit", function (event) {
+		event.preventDefault();
+		var data = new FormData(form);
+		var name = (data.get("name") || "").toString().trim();
+		var email = (data.get("email") || "").toString().trim();
+		var message = (data.get("message") || "").toString().trim();
+		var to = form.getAttribute("data-contact-form") || "hello@windstormservices.us";
+
+		var subject = "Message from " + (name || "the contact form");
+		var body = message + "\n\n— " + (name || "no name given") + (email ? " (" + email + ")" : "");
+
+		window.location.href =
+			"mailto:" + to + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+	});
+})();

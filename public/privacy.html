@@ -9,26 +9,19 @@
 		<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
 		<link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png" />
 		<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
-		<link rel="preload" href="/assets/fonts/instrument-sans-variable.woff2" as="font" type="font/woff2" crossorigin />
-		<link rel="stylesheet" href="/assets/css/style.css" />
-		<meta name="theme-color" content="#05080f" />
-		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="Windstorm Services" />
-		<meta property="og:title" content="Privacy Policy | Windstorm Services" />
-		<meta property="og:description" content="Privacy policy for Windstorm Services: Couchpilot, Whirled: Second Wind and this website." />
-		<meta property="og:image" content="https://windstormservices.us/assets/img/og-image.png" />
-		<meta property="og:url" content="https://windstormservices.us/privacy" />
-		<meta name="twitter:card" content="summary_large_image" />
+		<link rel="stylesheet" href="/assets/css/styles.css" />
 		<meta name="robots" content="noindex" />
 	</head>
 	<body>
+		<a class="skip-link" href="#main">Skip to content</a>
+
 		<header class="masthead">
 			<div class="masthead-inner">
 				<a class="brand" href="/">
-					<img src="/assets/img/logo-mark.svg" alt="" width="30" height="30" />
-					<span class="brand-text">Windstorm Services<small>Apps &amp; games</small></span>
+					<span class="mark">WINDSTORM</span>
+					<span class="rest">Services</span>
 				</a>
-				<nav class="nav-scroll" aria-label="Primary">
+				<nav class="nav-row" aria-label="Primary">
 					<a href="/">Home</a>
 					<a href="/couchpilot">Couchpilot</a>
 					<a href="/whirled">Whirled</a>
@@ -39,149 +32,177 @@
 			</div>
 		</header>
 
-		<main>
-			<section class="section container no-border">
-				<h1>Privacy Policy</h1>
-				<div class="prose">
-					<p><em>Last updated: October 23, 2026</em></p>
+		<main id="main">
+			<section class="section">
+				<div class="container">
+					<h1>Privacy Policy</h1>
+					<div class="prose">
+						<p><em>Last updated: October 23, 2026</em></p>
 
-					<p>This policy covers everything operated by Windstorm Services LLC ("we," "us"):</p>
-					<ul>
-						<li><strong>Couchpilot</strong>, our Android remote-control app for Android TV and Google TV</li>
-						<li><strong>The windstormservices.us website</strong></li>
-						<li><strong>Whirled: Second Wind</strong>, its website and, once available, its client and services</li>
-					</ul>
-					<p>
-						Each has its own section below, because they handle data very differently. The commitments
-						in "What we never do" apply to all of them.
-					</p>
+						<p>This policy covers everything operated by Windstorm Services LLC ("we," "us"):</p>
+						<ul>
+							<li><strong>Couchpilot</strong>, our Android remote-control app for Android TV and Google TV</li>
+							<li><strong>The windstormservices.us website</strong></li>
+							<li><strong>Whirled: Second Wind</strong>, its website and, once available, its client and services</li>
+						</ul>
+						<p>
+							Each has its own section below, because they handle data very differently. The
+							commitments in "What we never do" apply to all of them.
+						</p>
 
-					<h2 id="couchpilot">1. Couchpilot (Android app)</h2>
-					<p>
-						<strong>Couchpilot collects nothing.</strong> It has no account, no analytics, no
-						advertising, no crash-reporting service, and no servers of ours that it talks to.
-					</p>
-					<h3>What stays on your phone</h3>
-					<ul>
-						<li><strong>Your TVs:</strong> the name, network address and public key of each TV you pair with.</li>
-						<li><strong>Your settings:</strong> theme, button size, the apps you pinned, and similar choices.</li>
-						<li><strong>A pairing key:</strong> a cryptographic key created on your phone in Android's
-							secure Keystore. It proves to your TV that this phone is the one you paired, and it
-							can't be copied off the phone, even by the app.</li>
-						<li><strong>A crash report</strong>, only if the app crashes. It's saved on your phone and
-							shown to you the next time you open the app, with a button to copy it if you choose to
-							send it to us. It's never sent automatically.</li>
-					</ul>
-					<p>This data is excluded from Android backups and never leaves your phone.</p>
-					<h3>Network use</h3>
-					<p>Couchpilot only connects to devices on your local network:</p>
-					<ul>
-						<li>It looks for TVs using local network discovery (mDNS).</li>
-						<li>It connects to the TV you choose over an encrypted (TLS) connection, to send
-							remote-control commands and receive things like the current volume.</li>
-					</ul>
-					<p>It makes no connections to the internet.</p>
-					<h3>Permissions</h3>
-					<ul>
-						<li><strong>Network access</strong>, to reach your TV.</li>
-						<li><strong>Nearby devices / local network</strong> (Android 17 and later), which Android
-							requires for any app that talks to devices on your home network.</li>
-					</ul>
-					<h3>Deleting your data</h3>
-					<p>
-						Uninstall the app, or use Settings → "Forget all TVs and reset pairing key". To remove your
-						phone from a TV's list of remotes, use the TV's own settings.
-					</p>
+						<h2 id="couchpilot">1. Couchpilot (Android app)</h2>
+						<p>
+							<strong>Couchpilot collects nothing.</strong> It has no account, no analytics, no
+							advertising, no crash-reporting service, and no servers of ours that it talks to.
+						</p>
+						<h3>What stays on your phone</h3>
+						<ul>
+							<li><strong>Your TVs:</strong> the name, network address and public key of each TV you pair with.</li>
+							<li><strong>Your settings:</strong> theme, button size, the apps you pinned, and similar choices.</li>
+							<li>
+								<strong>A pairing key:</strong> a cryptographic key created on your phone in
+								Android's secure Keystore. It proves to your TV that this phone is the one you
+								paired, and it can't be copied off the phone, even by the app.
+							</li>
+							<li>
+								<strong>A crash report</strong>, only if the app crashes. It's saved on your phone
+								and shown to you the next time you open the app, with a button to copy it if you
+								choose to send it to us. It's never sent automatically.
+							</li>
+						</ul>
+						<p>This data is excluded from Android backups and never leaves your phone.</p>
+						<h3>Network use</h3>
+						<p>Couchpilot only connects to devices on your local network:</p>
+						<ul>
+							<li>It looks for TVs using local network discovery (mDNS).</li>
+							<li>
+								It connects to the TV you choose over an encrypted (TLS) connection, to send
+								remote-control commands and receive things like the current volume.
+							</li>
+						</ul>
+						<p>It makes no connections to the internet.</p>
+						<h3>Permissions</h3>
+						<ul>
+							<li><strong>Network access</strong>, to reach your TV.</li>
+							<li>
+								<strong>Nearby devices / local network</strong> (Android 17 and later), which
+								Android requires for any app that talks to devices on your home network.
+							</li>
+						</ul>
+						<h3>Deleting your data</h3>
+						<p>
+							Uninstall the app, or use Settings → "Forget all TVs and reset pairing key." To
+							remove your phone from a TV's list of remotes, use the TV's own settings.
+						</p>
 
-					<h2 id="website">2. The windstormservices.us website</h2>
-					<p><strong>Hosting logs:</strong> this site is hosted on Cloudflare Pages, which may log
-						standard technical data (IP address, browser, request timing) as part of normal
-						operation.</p>
-					<p><strong>Spam prevention:</strong> the waitlist form uses Cloudflare Turnstile, which may
-						process technical data (such as your IP address and browser signals) to verify you're
-						human. See
-						<a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare's privacy policy</a>.</p>
+						<h2 id="website">2. The windstormservices.us website</h2>
+						<p>
+							<strong>Hosting logs:</strong> this site runs on Cloudflare, which may log standard
+							technical data (IP address, browser, request timing) as part of normal operation.
+						</p>
+						<p>
+							<strong>Spam prevention:</strong> the waitlist form uses Cloudflare Turnstile, which
+							may process technical data (such as your IP address and browser signals) to verify
+							you're human. See
+							<a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare's privacy policy</a>.
+						</p>
 
-					<h2 id="whirled">3. Whirled: Second Wind</h2>
-					<p><strong>Waitlist:</strong> if you submit your email to join the waitlist, we store that
-						email address with our email provider (currently Buttondown) so we can notify you about
-						the project.</p>
-					<p><strong>Game accounts:</strong> the Whirled: Second Wind client and account system aren't
-						available yet. Before they launch, we'll update this policy to describe what they collect
-						and how it's stored.</p>
+						<h2 id="whirled">3. Whirled: Second Wind</h2>
+						<p>
+							<strong>Waitlist:</strong> if you submit your email to join the waitlist, we store
+							that email address with our email provider (currently Buttondown) so we can notify
+							you about the project.
+						</p>
+						<p>
+							<strong>Game accounts:</strong> the Whirled: Second Wind client and account system
+							aren't available yet. Before they launch, we'll update this policy to describe what
+							they collect and how it's stored.
+						</p>
 
-					<h2>4. What we never do</h2>
-					<ul>
-						<li>We don't sell your data.</li>
-						<li>We don't use third-party ad-tracking networks.</li>
-						<li>Couchpilot contains no ads or analytics of any kind.</li>
-					</ul>
+						<h2>4. What we never do</h2>
+						<ul>
+							<li>We don't sell your data.</li>
+							<li>We don't use third-party ad-tracking networks.</li>
+							<li>Couchpilot contains no ads or analytics of any kind.</li>
+						</ul>
 
-					<h2>5. Children's privacy</h2>
-					<p>Couchpilot doesn't collect personal information from anyone, including children.</p>
-					<p>
-						This site is not directed at children under 13, and we do not knowingly collect personal
-						information from children under 13.
-					</p>
+						<h2>5. Children's privacy</h2>
+						<p>Couchpilot doesn't collect personal information from anyone, including children.</p>
+						<p>
+							This site is not directed at children under 13, and we do not knowingly collect
+							personal information from children under 13.
+						</p>
 
-					<h2>6. Your choices</h2>
-					<ul>
-						<li><strong>Waitlist:</strong> to be removed, or to ask what data we have about you, email
-							<a href="mailto:hello@windstormservices.us">hello@windstormservices.us</a>.</li>
-						<li><strong>Couchpilot:</strong> we don't hold any data about you. Everything is on your
-							phone and can be deleted as described in <a href="#couchpilot">section 1</a>.</li>
-					</ul>
+						<h2>6. Your choices</h2>
+						<ul>
+							<li>
+								<strong>Waitlist:</strong> to be removed, or to ask what data we have about you,
+								email <a href="mailto:hello@windstormservices.us">hello@windstormservices.us</a>.
+							</li>
+							<li>
+								<strong>Couchpilot:</strong> we don't hold any data about you. Everything is on
+								your phone and can be deleted as described in <a href="#couchpilot">section 1</a>.
+							</li>
+						</ul>
 
-					<h2>7. Changes to this policy</h2>
-					<p>
-						We'll update the date above when this policy changes. For Couchpilot, changes ship with
-						the app update they apply to.
-					</p>
+						<h2>7. Changes to this policy</h2>
+						<p>
+							We'll update the date above when this policy changes. For Couchpilot, changes ship
+							with the app update they apply to.
+						</p>
 
-					<h2>8. Contact</h2>
-					<p>
-						Windstorm Services LLC, Shamokin, PA ·
-						<a href="mailto:hello@windstormservices.us">hello@windstormservices.us</a>
-					</p>
-					<p>
-						<small>Android TV, Google TV and Chromecast are trademarks of Google LLC. Couchpilot is not
-						affiliated with Google.</small>
-					</p>
+						<h2>8. Contact</h2>
+						<p>
+							Windstorm Services LLC, Shamokin, PA —
+							<a href="mailto:hello@windstormservices.us">hello@windstormservices.us</a>
+						</p>
+						<p>
+							<small>Android TV, Google TV and Chromecast are trademarks of Google LLC. Couchpilot
+							is not affiliated with Google.</small>
+						</p>
+					</div>
 				</div>
 			</section>
 		</main>
 
 		<footer class="site-footer">
-			<div class="footer-inner">
+			<div class="container">
 				<div class="footer-brand">
 					<a class="brand" href="/">
-						<img src="/assets/img/logo-mark.svg" alt="" width="30" height="30" />
-						<span class="brand-text">Windstorm Services<small>Apps &amp; games</small></span>
+						<span class="mark">WINDSTORM</span>
+						<span class="rest">Services</span>
 					</a>
 					<p>An independent studio in Shamokin, Pennsylvania, making apps and games we'd want to use ourselves.</p>
 				</div>
 				<div class="footer-cols">
-					<div>
-						<h4>Apps</h4>
-						<a href="/couchpilot">Couchpilot</a>
-						<a href="/whirled">Whirled: Second Wind</a>
+					<div class="footer-col">
+						<h2>Apps</h2>
+						<ul>
+							<li><a href="/couchpilot">Couchpilot</a></li>
+							<li><a href="/whirled">Whirled: Second Wind</a></li>
+						</ul>
 					</div>
-					<div>
-						<h4>Studio</h4>
-						<a href="/about">About</a>
-						<a href="/support">Support</a>
-						<a href="/contact">Contact</a>
+					<div class="footer-col">
+						<h2>Studio</h2>
+						<ul>
+							<li><a href="/about">About</a></li>
+							<li><a href="/support">Support</a></li>
+							<li><a href="/contact">Contact</a></li>
+						</ul>
 					</div>
-					<div>
-						<h4>Legal</h4>
-						<a href="/privacy">Privacy</a>
-						<a href="/terms">Terms</a>
+					<div class="footer-col">
+						<h2>Legal</h2>
+						<ul>
+							<li><a href="/privacy">Privacy</a></li>
+							<li><a href="/terms">Terms</a></li>
+						</ul>
 					</div>
 				</div>
-			</div>
-			<div class="footer-legal">
-
-				<p>© 2026 Windstorm Services LLC · Shamokin, Pennsylvania</p>
+				<p class="footer-legal">
+					Android TV and Google Play are trademarks of Google LLC. Couchpilot is not affiliated with
+					or endorsed by Google. Whirled: Second Wind is an independent fan project, not affiliated
+					with or endorsed by the creators of the original Whirled. &copy; 2026 Windstorm Services.
+				</p>
 			</div>
 		</footer>
 	</body>
